@@ -9,45 +9,22 @@
  * @letters: Number of letters to read.
  * Return: The actual number of letters read and printed, or 0 on failure.
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int fd;
-    ssize_t w, t;
-    char *buf;
+	char *buf;
+	ssize_t fd;
+	ssize_t w;
+	ssize_t r;
 
-    if (filename == NULL)
-        return (0);
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+	buf = malloc(sizeof(char) * letters);
+	r = read(fd, buf, letters);
+	w = write(STDOUT_FILENO, buf, r);
 
-    fd = open(filename, O_RDONLY);
-    if (fd == -1)
-        return (0);
-
-    buf = malloc(letters);
-    if (buf == NULL)
-    {
-        close(fd);
-        return (-1);
-    }
-
-    t = read(fd, buf, letters);
-    if (t == -1)
-    {
-        free(buf);
-        close(fd);
-        return (-1);
-    }
-
-    w = write(STDOUT_FILENO, buf, t);
-    if (w == -1 || w != t)
-    {
-        free(buf);
-        close(fd);
-        return (-1);
-    }
-
-    free(buf);
-    close(fd);
-    return (w);
+	free(buf);
+	close(fd);
+	return (w);
 }
 
