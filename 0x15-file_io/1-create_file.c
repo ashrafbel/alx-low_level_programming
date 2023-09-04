@@ -11,7 +11,7 @@
  * @text_content: Text content to write to the file (can be NULL).
  * Return: 1 on success, -1 on failure.
  */
-nt create_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 
 {
 	int fd, t, l = 0;
