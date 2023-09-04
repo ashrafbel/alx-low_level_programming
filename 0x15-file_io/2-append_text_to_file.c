@@ -8,9 +8,9 @@
  * @text_content: Text content to append to the file (can be NULL).
  * Return: 1 on success, -1 on failure.
  */
-int append_text_to_file(const char *filename, char *text_content)
+nt append_text_to_file(const char *filename, char *text_content)
 {
-	int i, y, len = 0;
+	int o, r, len = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -21,13 +21,13 @@ int append_text_to_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	i = open(filename, O_WRONLY | O_APPEND);
-	y = write(o, text_content, len);
+	o = open(filename, O_WRONLY | O_APPEND);
+	r = write(o, text_content, len);
 
-	if (i == -1 || y == -1)
+	if (o == -1 || r == -1)
 		return (-1);
 
-	close(i);
+	close(o);
 
 	return (1);
 }
