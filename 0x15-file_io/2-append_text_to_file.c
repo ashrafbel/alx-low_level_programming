@@ -8,7 +8,7 @@
  * @text_content: Text content to append to the file (can be NULL).
  * Return: 1 on success, -1 on failure.
  */
-nt append_text_to_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int o, r, len = 0;
 
