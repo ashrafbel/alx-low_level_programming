@@ -4,10 +4,7 @@
 
 /**
  * create_file - Creates a file and writes text content to it.
- * 
  * @filename: Name of the file to create.
- * 
- *
  * @text_content: Text content to write to the file (can be NULL).
  * Return: 1 on success, -1 on failure.
  */
