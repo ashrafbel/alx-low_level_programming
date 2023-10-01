@@ -5,7 +5,7 @@
  * factorial - Computes the factorial of a number using recursion.
  * @n: Input number
  *
- * Returns the factorial of n.
+ * Return: factorial n
  */
 
 
