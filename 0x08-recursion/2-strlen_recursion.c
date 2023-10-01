@@ -5,8 +5,6 @@
  *
  * Returns length of the input string using recursion.
  */
-
-
 int _strlen_recursion(char *s)
 {
 	int l = 0;
