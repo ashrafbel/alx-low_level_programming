@@ -7,7 +7,7 @@
  * @s1: First string
  * @s2: Second string with wildcards
  *
- * Returns: 0 if strings match with wildcards.
+ * Return: 0 if strings match with wildcards.
  */
 
 
