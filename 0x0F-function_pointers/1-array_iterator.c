@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-typedef unsigned int size_t;
-
 /**
  * array_iterator - Executes a function on each element of an array
  * @array: Pointer to the array
@@ -10,11 +8,8 @@ typedef unsigned int size_t;
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-    if (array != NULL && action != NULL)
-    {
-        for (size_t i = 0; i < size; i++)
-        {
-            action(array[i]);
-        }
-    }
+	int *end = array + size - 1;
+	if (array && size && action)
+		while (array <= end)
+			ection(*array++);
 }
