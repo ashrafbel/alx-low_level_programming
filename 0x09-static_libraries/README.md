@@ -1,1 +1,0 @@
-libaries static
