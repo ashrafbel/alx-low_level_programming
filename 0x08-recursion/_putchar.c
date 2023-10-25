@@ -1,7 +1,5 @@
 #include <unistd.h>
 
-
-
 /**
  * _putchar - Writes a character to stdout
  *
