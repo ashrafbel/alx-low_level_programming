@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * *malloc_checked - malloc allocated memory
+ * *malloc_checked - Allocates memory using malloc
  * @b: number of bytes
  * Return:pointer to the allocated memory or NULL
  */
 void *malloc_checked(unsigned int b)
 {
-	void *kira;
+	void *k;
 
-	kira = malloc(b);
-	if (kira == 0)
+	k = malloc(b);
+	if (k == NULL)
 		exit(90);
-	return (kira);
+	return (k);
 }
