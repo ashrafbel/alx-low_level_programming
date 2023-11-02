@@ -6,7 +6,8 @@
  */
 void *malloc_checked(unsigned int b)
 {
-int *kira;
+	void *kira;
+
 	kira = malloc(b);
 	if (kira == 0)
 		exit(90);
