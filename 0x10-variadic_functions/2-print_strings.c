@@ -4,10 +4,7 @@
  * @separator: String between strings
  * @n: Number of strings to print.
  * @...: Strings to be print
- *
- * Description: replaces NULL strings with (nil)
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list stg;
