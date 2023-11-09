@@ -16,7 +16,7 @@ while (k < n)
 {
 s = va_arg(stg, char *);
 
-if (!n)
+if (!s)
 printf("(nil)");
 else
 printf("%s", s);
