@@ -9,8 +9,8 @@ listint_t *tp;
 
 while (head)
 {
+head = tp
 tp = head->next;
-head = tp;
 free(tp);
 }
 }
