@@ -12,8 +12,8 @@ size_t C = 0;
 while (h)
 {
 printf("%d\n", h->n);
-h = h->next;
 C++;
+h = h->next;
 }
 return (C);
 }
