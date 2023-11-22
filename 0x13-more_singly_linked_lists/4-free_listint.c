@@ -1,17 +1,17 @@
 #include "lists.h"
 /**
  * free_listint - frees a linked list
- * @head: pointer to firstto be freed
+ * @head: pointer to first to be free
  */
 void free_listint(listint_t *head)
 {
-listint_t *T_P;
+listint_t *tp;
 
 while (head)
 {
-T_P = head->next;
-head = T_P;
-free(head);
+tp = head->next;
+head = tp;
+free(tp);
 }
 }
 
