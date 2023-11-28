@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * read_textfile - reads a text file and print it
  * @filename: filename to read.
@@ -16,14 +17,17 @@ if (!filename)
 return (0);
 
 fdtr = open(filename, O_RDONLY);
-
 if (fdtr == -1)
 return (0);
+
+buf_eer = malloc(sizeof(char) * (letters));
 if (!buf_eer)
 return (0);
 
 by = read(fdtr, buf_eer, letters);
 by = write(STDOUT_FILENO, buf_eer, by);
 close(fdtr);
+
+free(buf_eer);
 return (by);
 }
