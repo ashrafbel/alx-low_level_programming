@@ -14,7 +14,7 @@ dlistint_t *c = head;
 while (c != NULL && IDX < index)
 {
 c = c->next;
-IDX;
+IDX++;
 }
 return (c);
 }
