@@ -15,7 +15,7 @@ if (!h)
 return (NULL);
 
 NE_W = malloc(sizeof(dlistint_t));
-if (new_node == NULL)
+if (NE_W == NULL)
 return (NULL);
 
 NE_W->n = n;
@@ -31,7 +31,7 @@ if (*h != NULL)
 return (NE_W);
 }
 Tp = *h;
-while (Tp != NULL && i < idx - 1)
+while (Tp != NULL && X < idx - 1)
 {
 Tp = Tp->next;
 X++;
