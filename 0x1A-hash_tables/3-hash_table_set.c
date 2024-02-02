@@ -13,7 +13,7 @@ unsigned long int x;
 hash_node_t *NEW;
 char *newVal;
 
-if (ht == NULL || key == NULL || *key == NULL || value == NULL)
+if (ht == NULL || key == NULL || strlen(key) == 0 || value == NULL)
 return (0);
 
 newVal = strdup(value);
