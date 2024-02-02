@@ -8,12 +8,12 @@ void hash_table_delete(hash_table_t *ht)
 hash_node_t *current, *Tp;
 unsigned long int a;
 
-if (!ht)
+if (ht == NULL)
 return;
 for (a = 0; a < ht->size; a++)
 {
 current = ht->array[a];
-while (current)
+while (current != NULL)
 {
 Tp = current;
 current = current->next;
