@@ -14,7 +14,7 @@ return;
 printf("{");
 for (a = 0; a < ht->size; a++)
 {
-Tp = ht->array[i];
+Tp = ht->array[a];
 while (Tp != NULL)
 {
 if (fpd == 1)
