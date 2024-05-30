@@ -5,5 +5,9 @@
 CC = gcc
 SRC = main.c other_files.c
 
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+
 all:
     $(CC) -o school $(SRC)
