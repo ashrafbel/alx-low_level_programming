@@ -2,21 +2,20 @@
 #recompiling only the updated files."
 
 
-
 CC = gcc
-SRC = $(wildcard *.c)
-OBJ = $(patsubst %.c,%.o,$(SRC))
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
 NAME = school
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $^ -o $@
+	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) -c $< -o $@
 
-clean:
-	rm -f $(NAME) $(OBJ)
-
 .PHONY: all clean
+
+clean:
+	rm -f $(OBJ) $(NAME)
