@@ -3,11 +3,14 @@
 
 
 CC = gcc
-SRC = main.c other_files.c
+SRC = $(wildcard *.c)
 
-OBJ = $(SRC:.c=.o)
-NAME = school
+all: school
 
+school: $(SRC)
+	$(CC) $(SRC) -o $@
 
-all:
-    $(CC) -o school $(SRC)
+clean:
+	rm -f school
+
+.PHONY: all clean
