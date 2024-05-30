@@ -1,0 +1,22 @@
+#Makefile to build $(NAME) from $(SRC) using $(CC)
+#recompiling only the updated files."
+
+
+
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = school
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	rm -f $(NAME) $(OBJ)
+
+.PHONY: all clean
