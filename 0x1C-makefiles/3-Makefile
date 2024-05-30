@@ -1,0 +1,32 @@
+#Makefile with rules all , oclean, , re to build school, using CC, SRC, OBJ, NAME.
+#clean
+#fclean
+#re to build school, using CC, SRC, OBJ, NAME.
+
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $@
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+
+fclean: clean oclean
+
+re: fclean all
+
+.PHONY: all clean oclean fclean re
